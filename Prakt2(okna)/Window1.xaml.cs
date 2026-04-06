@@ -33,7 +33,10 @@ public class PositionObject
         public double PriceCurrency { get; set; }
 
     }
+окна
     public partial class WorkWindow : Window
+    public partial class Window1 : Window
+master
     {
         public WorkWindow()
         {
@@ -80,6 +83,7 @@ public class PositionObject
         {
 
         }
+окна
 
         private void bUpdate_Click(object sender, RoutedEventArgs e)
         {
@@ -100,5 +104,6 @@ public class PositionObject
         {
 
         }
+master
     }
 }
