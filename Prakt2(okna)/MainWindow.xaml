@@ -12,11 +12,11 @@
             <ColumnDefinition Width="173*"/>
             <ColumnDefinition Width="27*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="bEnter" Content="Войти" HorizontalAlignment="Left" Margin="190,122,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="60" Width="160" BorderBrush="#FFB7B7B7"/>
-        <Button x:Name="bRegistration" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="60" Width="160"/>
-        <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Margin="239,18,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="tbLogin_TextChanged" BorderBrush="#FFB3AFAB" Background="#FFFAFAFA" Grid.ColumnSpan="2" Height="22"/>
-        <TextBox x:Name="tbPass1" HorizontalAlignment="Left" Margin="239,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="19" Background="#FFFAFAFA"/>
-        <TextBox x:Name="tbPass2" HorizontalAlignment="Left" Margin="239,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="19" Background="#FFFAFAFA"/>
+        <Button x:Name="bEnter" Content="Войти" HorizontalAlignment="Left" Margin="190,122,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="60" Width="160" Click="bEnter_Click"/>
+        <Button x:Name="bRegistration" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="60" Width="160" Click="bRegistration_Click"/>
+        <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Margin="239,17,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22" IsEnabled="False" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbPass1" HorizontalAlignment="Left" Margin="240,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="19" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbPass2" HorizontalAlignment="Left" Margin="240,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="19" Grid.ColumnSpan="2"/>
         <Label Content="Логин" HorizontalAlignment="Left" Margin="190,11,0,0" VerticalAlignment="Top" Height="27" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Width="51">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -29,6 +29,6 @@
         </Label>
         <Label Content="Пароль1" HorizontalAlignment="Left" Margin="183,49,0,0" VerticalAlignment="Top" Height="27" Grid.ColumnSpan="2" Width="58"/>
         <Label Content="Пароль2" HorizontalAlignment="Left" Margin="183,85,0,0" VerticalAlignment="Top" Height="27" Grid.ColumnSpan="2"/>
-        <Button x:Name="bLogin" Content="Залогиниться" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="60" Width="160" Grid.ColumnSpan="2"/>
+        <Button x:Name="bLogin" Content="Залогиниться" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="60" Width="160" Grid.ColumnSpan="2" Click="bLogin_Click"/>
     </Grid>
 </Window>

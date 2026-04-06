@@ -1,4 +1,4 @@
-﻿using Prakt2_okna_;
+using Prakt2_okna_;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +26,45 @@ namespace Prakt2_okna_
     bool Choised = false;
 
     public MainWindow()
+ окна
     {
+        InitializeComponent();
+    }
+
+    private void bRegistration_Click(object sender, RoutedEventArgs e)
+    {
+        Choised = false;
+        tbLogin.IsEnabled = true;
+        tbPass1.IsEnabled = true;
+        tbPass2.IsEnabled = true;
+        bEnter.IsEnabled = true;
+    }
+
+    private void bLogin_Click(object sender, RoutedEventArgs e)
+    {
+        Choised = true;
+        tbLogin.IsEnabled = true;
+        tbPass1.IsEnabled = true;
+        tbPass2.IsEnabled = false;
+        bEnter.IsEnabled = true;
+    }
+
+    private void Registration(string tbL, string tbP1, string tbP2)
+    {
+        WorkWindow workWindow = new WorkWindow();
+        if (tbL == "")
+        {
+            MessageBox.Show("Введите логин");
+            return;
+        }
+        if (tbP1 == tbP2)
+        {
+            /*
+            проверить логин на незанятость если такого нет
+            зарегистрировать пользователя, иначе сообщить об ошибке
+            */
+        }
+   {
         InitializeComponent();
     }
 
@@ -63,6 +101,7 @@ namespace Prakt2_okna_
             зарегистрировать пользователя, иначе сообщить об ошибке
             */
         }
+master
         else
         {
             MessageBox.Show("Пароли различны");
@@ -75,7 +114,11 @@ namespace Prakt2_okna_
 
     private void Logining(string tbL, string tbP1)
     {
+окна
+        WorkWindow workWindow = new WorkWindow();
+
         Window1 workWindow = new Window1();
+master
         if (tbL == "")
         {
             MessageBox.Show("Введите логин");
@@ -99,11 +142,15 @@ namespace Prakt2_okna_
         else
         {
             Logining(tbLogin.Text, tbPass1.Text);
+окна
         }
     }
 
   }
 }
+master
         }
+    }
+
     }
 }

@@ -33,9 +33,12 @@ public class PositionObject
         public double PriceCurrency { get; set; }
 
     }
+окна
+    public partial class WorkWindow : Window
     public partial class Window1 : Window
+master
     {
-        public Window1()
+        public WorkWindow()
         {
             InitializeComponent();
         }
@@ -80,5 +83,27 @@ public class PositionObject
         {
 
         }
+окна
+
+        private void bUpdate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bMarkup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cbPosType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+master
     }
 }
