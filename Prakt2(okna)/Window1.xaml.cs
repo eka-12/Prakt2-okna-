@@ -13,15 +13,92 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace Prakt2_okna_
-{
+{ 
+    public enum PositionType
+    {
+        Production = 0,
+        Service = 1,
+        Bonus = 2
+    }
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+public class PositionObject
     {
-        public Window1()
+        public int PositionID { get; set; }
+        public string PositionName { get; set; }
+        public PositionType PositionType { get; set; }
+        public int PositionValue { get; set; }
+        public double PositionPrice { get; set; }
+        public double PriceCurrency { get; set; }
+
+    }
+    public partial class WorkWindow : Window
+    {
+        public WorkWindow()
         {
             InitializeComponent();
+        }
+        private void bAdd_Click(object sender, RoutedEventArgs e)
+        {
+            PositionObject item = new PositionObject();
+            item.PositionID = dgMain.Items.Count + 1;
+            item.PositionName = tbPosName.Text;
+            item.PositionType =
+           (PositionType)cbPosType.SelectedItem;
+            item.PositionValue = int.Parse(tbPosValue.Text);
+            item.PositionPrice = double.Parse(tbPosPrice.Text);
+            string[] strings =
+           lbQuotes.SelectedItem.ToString().Split(' ');
+            item.PriceCurrency =
+           Math.Round(double.Parse(tbPosPrice.Text) /
+           double.Parse(strings[0]), 2);
+            dgMain.Items.Add(item);
+        }
+
+        private void bAnalys_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sMarkup_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            lMarkup.Content = Math.Round(100 + sMarkup.Value, 2) + "%";
+        }
+               private void lbQuotes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lbQuotes.Items.Clear();
+            lbQuotes.Items.Add("75,47 USD");
+            lbQuotes.Items.Add("80,24 EUR");
+            lbQuotes.Items.Add("10,88 CNY");
+            lbQuotes.SelectedIndex = 0;
+        }
+
+     
+
+        private void bQuotes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bUpdate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bMarkup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cbPosType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
