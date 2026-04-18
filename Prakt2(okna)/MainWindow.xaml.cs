@@ -104,6 +104,4 @@ namespace Prakt2_okna_
 
   }
 }
-        }
-    }
-}
+        
