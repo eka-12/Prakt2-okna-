@@ -33,9 +33,9 @@ public class PositionObject
         public double PriceCurrency { get; set; }
 
     }
-    public partial class Window1 : Window
+    public partial class WorkWindow : Window
     {
-        public Window1()
+        public WorkWindow()
         {
             InitializeComponent();
         }
@@ -67,6 +67,11 @@ public class PositionObject
         }
                private void lbQuotes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
+        }
+        
+            private void bQuotes_Click(object sender, RoutedEventArgs e)
+        {
             lbQuotes.Items.Clear();
             lbQuotes.Items.Add("75,47 USD");
             lbQuotes.Items.Add("80,24 EUR");
@@ -74,11 +79,26 @@ public class PositionObject
             lbQuotes.SelectedIndex = 0;
         }
 
-     
-
-        private void bQuotes_Click(object sender, RoutedEventArgs e)
+        private void bUpdate_Click(object sender, RoutedEventArgs e)
         {
 
         }
-    }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            cbPosType.ItemsSource = Enum.GetValues(typeof(PositionType));
+            cbPosType.SelectedIndex = 0;
+        }
+
+        private void bMarkup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cbPosType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+     }
 }
